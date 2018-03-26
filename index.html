@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Road Simulator</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+    	<div class="topButton closeButton">
+    		<img src="src/closeButton.png">
+    		<p>close</p>
+    	</div>
+    	<div class="topButton restartButton">
+    		<img src="src/restartButton.png">
+    		<p>restart</p>
+    	</div>
+
+        <div class="window">
+        	<div class="leftBorder"></div>
+        	<div class="rightBorder"></div>
+        	<div class="roadWindow">
+        		<div class="road" id="road">
+        			<div id="toLeftLine1" class="roadLine dotted_bottom"><img class="flip180" src="src/arrow.png"></div>
+        			<div id="toLeftLine2" class="roadLine dotted_bottom dotted_top"><img class="flip180" src="src/arrow.png"></div>
+        			<div id="toLeftLine3" class="roadLine dotted_top"><img class="flip180" src="src/arrow.png"></div>
+        			<div class="separator"></div>
+        			<div id="toRightLine3" class="roadLine dotted_bottom"><img src="src/arrow.png"></div>
+        			<div id="toRightLine2" class="roadLine dotted_bottom dotted_top"><img src="src/arrow.png"></div>
+        			<div id="toRightLine1" class="roadLine dotted_top"><img src="src/arrow.png"></div>
+        		</div>
+        	</div>
+        </div>
+
+        <div class="settings">
+        	<div class="minSpeed">
+        		<p>min. speed</p>
+        		<input id="minSpeedInput" type="number" onchange="minSpeedChange(this.value)" value="20">
+        		<p class="fs15">km/h</p>
+        	</div>
+        	<div class="maxSpeed">
+        		<p>max. speed</p>
+        		<input id="maxSpeedInput" type="number" onchange="maxSpeedChange(this.value)" value="60">
+        		<p class="fs15">km/h</p>
+        	</div>
+        	<div class="traffic">
+        		<p>traffic</p>
+        		<input id="trafficInput" type="number" onchange="trafficChange(this.value)" value="10">
+        		<p class="fs15">car/m</p>
+        	</div>
+        	<div class="slowdown">
+        		<p>slowdown</p>
+        		<input id="slowdownInput" type="number" onchange="slowdownChange(this.value)" value="4">
+        		<p class="fs15">km/h</p>
+        	</div>
+        </div>
+
+<!-- 		<div class="button" id="buttonA">A</div>
+        <div class="button" id="buttonB">B</div>
+        <div class="button" id="buttonC">C</div> -->
+        <div id="redButton"></div>
+
+        <div class="leftButtons">
+	        <div class="button" id="playButton">start</div>	
+        </div>
+
+        <div class="rightButtons">
+
+
+	        <div class="button" id="cleanButton">clean</div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>
